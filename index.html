@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/reset.css" rel="stylesheet">
+	<link href="assets/style.css" rel="stylesheet">
+	<script src="assets/arena.js"></script>
+	<link href="assets/favicon.png" rel="icon">
+	<link rel="stylesheet" href="assets/bootstrap.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="left"></div>
+		<!-- Replace this URL with your channel to connect the API! -->
+		<a href="https://www.are.na/yining-zhu-_5ltvwbtgr8/patterns-in-real-life" id="channel-url">
+			<h1 id="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+		</a>
+	</header>
+  <!-- Modal -->
+  <div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-lg" role="document">
+	  <div class="modal-content">
+		<img id="zoomupImage" alt="">
+	  </div>
+	</div>
+  </div>
+	<div id="channel-description"></div> <!-- Same here for the channel description. -->
+	<!-- All the channel “blocks” will be created as children, here. -->
+	<!-- You could move the classes to different section elements to separate the types! -->
+	<section
+		class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks waterfall-container">
+
+	</section>
+
+
+
+	<!-- These are the templates for the various block types, below. -->
+	<!-- You can move/nest/remove any of the insertion points! -->
+	<!-- For example, you could only show images for actual image blocks. -->
+	<!-- You could not show the type if you group them by section, above. -->
+
+	<!-- Spotify, Soundcloud, etc. -->
+	<template id="audio-embed-block">
+		<figure class="audio-embed">
+			<!-- You can use the container classes to style a whole type. -->
+			<h3 class="title"></h3> <!-- Block title inserts here. -->
+			<img class="image"> <!-- Image/cover image source inserts here. -->
+			<div class="embed"></div> <!-- Embed iframe inserts here. -->
+			<a class="link">
+				<!-- Original URL inserts here. -->
+				<p class="link-title"></p> <!-- Link title inserts here. -->
+			</a>
+			<figcaption class="description"></figcaption> <!-- Block description inserts here. -->
+			<p class="type"></p> <!-- Block type/kind inserts here. -->
+		</figure>
+	</template>
+
+	<!-- Uploaded audio files. -->
+	<template id="audio-file-block">
+		<figure class="audio-file-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<audio class="audio" controls></audio> <!-- Audio source inserts here. -->
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+	<template id="image-block">
+		<figure class="image-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<a class="link">
+				<p class="link-title"></p>
+			</a>
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+	<template id="link-block">
+		<figure class="link-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<a class="link">
+				<p class="link-title"></p>
+			</a>
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+	<template id="pdf-block">
+		<figure class="pdf-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<a class="link">
+				<!-- PDF link inserts here. -->
+				<p class="link-title"></p> <!-- Repeats the block title. -->
+			</a>
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+	<template id="text-block">
+		<figure class="text-block">
+			<h3 class="title"></h3>
+			<div class="content"></div> <!-- Text blocks insert their HTML here. -->
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+	<!-- YouTube, Vimeo, etc. -->
+	<template id="video-embed-block">
+		<figure class="video-embed-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<div class="embed"></div>
+			<a class="link">
+				<p class="link-title"></p>
+			</a>
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+	<!-- Uploaded video files. -->
+	<template id="video-file-block">
+		<figure class="video-file-block">
+			<h3 class="title"></h3>
+			<img class="image">
+			<video class="video" controls></video> <!-- Video source inserts here. -->
+			<figcaption class="description"></figcaption>
+			<p class="type"></p>
+		</figure>
+	</template>
+
+
+	<div class="title">
+		<h1 id="channel-title">Patterns in Real Life</h1>
+
+		<a target="_blank" href="http://codepen.io/Moslim/"></a>
+	</div>
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+		  <div class="modal-content">
+			<img src="https://d2w9rnfcy7mm78.cloudfront.net/15754761/original_356da176e44b684e4374c8752e96b4b5.gif?1648219773?bc=0" alt="">
+		  </div>
+		</div>
+	  </div>
+</body>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+	integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+	crossorigin="anonymous"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+	integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+	integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+	crossorigin="anonymous"></script>
+</html>
